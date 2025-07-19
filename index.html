@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+  <h2>> Generate a secure password</h2>
+  <div class="theme-toggle">
+    🌙
+    <label class="switch">
+      <input type="checkbox" id="themeSwitch">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>
+
+
+    
+    <div class="output-wrapper">
+      <input type="text" id="password" class="output" readonly />
+      <button id="copyBtn" class="copy-btn">⧉</button>
+    </div>
+    <div class="divider"></div>
+    <div class="settings">
+      <div class="left-options">
+        <label><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+        <label><input type="checkbox" id="numbers" checked /> Numeric</label>
+        <label><input type="checkbox" id="symbols" /> Symbols</label>
+      </div>
+      <div class="right-options">
+        <label for = "length">Password Length:
+          <input type="number" id="length" min="4" max="32" value="20">
+        </label>
+        <input type="range" id="lengthRange" min="4" max="32" value="20">
+      </div>
+    </div>
+
+    <button class="generate-btn" onclick="generatePassword()">Generate</button>
+
+    <div class="footer">
+      Made with <span> ♥ </span> by <a href="#"> Nisha Kumari </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
